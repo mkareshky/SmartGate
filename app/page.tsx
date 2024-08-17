@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { lusitana } from '@/components/shared/fonts'
 import Image from 'next/image'
 import AppLogo from '@/components/shared/app-logo'
+import { Button } from '@/components/ui/button'
+import { ArrowRightIcon } from 'lucide-react'
 
 export default function Page() {
   return (
@@ -14,11 +16,14 @@ export default function Page() {
           <p
             className={`${lusitana.className} text-xl md:text-3xl md:leading-normal`}
           >
-            <strong>Welcome to Smart Gate Dashboard.</strong>
+            <strong>Welcome to Next 15 Admin Dashboard.</strong>
           </p>
-
-          <span>Log in</span>
-
+          <Button asChild className="w-1/2">
+            <Link href="/login">
+              <span>Log in</span>
+              <ArrowRightIcon className="w-6" />
+            </Link>
+          </Button>
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
           <Image
