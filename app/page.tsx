@@ -16,11 +16,17 @@ export default function Page() {
           <p
             className={`${lusitana.className} text-xl md:text-3xl md:leading-normal`}
           >
-            <strong>Welcome to Next 15 Admin Dashboard.</strong>
+            <strong>Welcome to Smart Gate Admin Dashboard.</strong>
           </p>
           <Button asChild className="w-1/2">
             <Link href="/login">
               <span>Log in</span>
+              <ArrowRightIcon className="w-6" />
+            </Link>
+          </Button>
+          <Button asChild className="w-1/2">
+            <Link href="/register">
+              <span>Register</span>
               <ArrowRightIcon className="w-6" />
             </Link>
           </Button>
