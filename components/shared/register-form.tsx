@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { createUser, State } from '@/lib/actions/user.actions'
 import { UserField } from '@/types'
-import { AtSign, CheckIcon, ClockIcon, UserCircleIcon } from 'lucide-react'
+import { AtSign, CheckIcon, ClockIcon, KeyIcon, UserCircleIcon } from 'lucide-react'
 import Link from 'next/link'
 import { useActionState } from 'react'
 
@@ -15,10 +15,10 @@ export default function RegisterForm({ users }: { users: UserField[] }) {
         <form action={formAction}>
             <div className="rounded-md  p-4 md:p-6">
 
-                {/* User Name */}
+                {/* Name */}
                 <div className="mb-4">
                     <label htmlFor="user" className="mb-2 block text-sm font-medium">
-                        User Name
+                        Name
                     </label>
                     <div className="relative">
                         <input
@@ -84,7 +84,7 @@ export default function RegisterForm({ users }: { users: UserField[] }) {
                             required
                             minLength={6}
                         />
-                        <ClockIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 " />
+                        <KeyIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 " />
                     </div>
 
                     <div id="password-error" aria-live="polite" aria-atomic="true">
@@ -125,7 +125,7 @@ export default function RegisterForm({ users }: { users: UserField[] }) {
                                 }
                             }}
                         />
-                        <CheckIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2" />
+                        <KeyIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2" />
                     </div>
 
                     {/* New and retype passwords should match */}
